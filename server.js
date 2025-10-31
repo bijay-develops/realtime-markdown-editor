@@ -13,7 +13,7 @@ app.get('/', function(request, response){
 });
 
 // listen on port 8000 ( for localhost ) or the port defined by the environment
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 8001;
 app.listen(port, function(){
     console.log('Server is running on port ' + port);
 });
