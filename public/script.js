@@ -3,6 +3,14 @@ window.onloadstartonload = function() {
     var pad = document.getElementById('pad');
     var markdownArea = document.getElementById('markdown');
 
-    var markdownArea = A
+    var markdownArea = document.getElementById('markdown');
 
+    var convertTextAreaToMarkdown = function() {
+        var markdownText = pad.value;
+        html = converter.makeHtml(markdownText);
+        markdownArea.innerHTML = html;
+    };
+
+    pad.addEventListener('input', convertTextAreaToMarkdown);
+    convertTextAreaToMarkdown();
 };
