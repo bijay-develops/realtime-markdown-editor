@@ -8,12 +8,14 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 //routes for app
-app.get('/', function(request, response){
-    response.render('pad');
+app.get('/', function(req, res){
+    res.render('pad');
 });
 
+
+
 // listen on port 8000 ( for localhost ) or the port defined by the environment
-var port = process.env.PORT || 8001;
+var port = process.env.PORT || 8002;
 app.listen(port, function(){
     console.log('Server is running on port ' + port);
 });

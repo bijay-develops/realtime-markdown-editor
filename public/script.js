@@ -3,7 +3,6 @@ window.onloadstartonload = function() {
     var pad = document.getElementById('pad');
     var markdownArea = document.getElementById('markdown');
 
-    var markdownArea = document.getElementById('markdown');
 
     var convertTextAreaToMarkdown = function() {
         var markdownText = pad.value;
