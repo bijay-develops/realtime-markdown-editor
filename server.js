@@ -7,6 +7,9 @@ var express = require('express');
     // public folder to store assets
     app.use(express.static(__dirname + '/public'));
 
+    // serve sharejs client files
+    app.use('/share', express.static(__dirname + '/node_modules/share/webclient'));
+
     // routes for app
     app.get('/', function(req, res) {
       res.render('pad');
@@ -21,7 +24,7 @@ var express = require('express');
 
     // options for sharejs
     var options = {
-      db: {type: 'redis'},
+      db: {type: 'none'},
     };
 
     // attach the express server to sharejs
